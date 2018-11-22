@@ -47,7 +47,7 @@ void Alterar_Notas::on_Btn_PesquisaNota_clicked()
 
 
 }
-
+// Função para alterar ou inserir a nota 1 do aluno!
 void Alterar_Notas::on_Btn_AlterarNota1_clicked()
 {
     QString pesquisa=ui->Pesquisa_Aluno_Nota->text();
