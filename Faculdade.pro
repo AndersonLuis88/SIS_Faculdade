@@ -32,9 +32,9 @@ SOURCES += \
     disciplinas_aluno.cpp \
     grade_curso.cpp \
     turmas.cpp \
-    notas_professor.cpp \
     login.cpp \
-    cadastrar.cpp
+    cadastrar.cpp \
+    alterar_notas.cpp
 
 HEADERS += \
     aluno.h \
@@ -43,10 +43,10 @@ HEADERS += \
     disciplinas_aluno.h \
     grade_curso.h \
     turmas.h \
-    notas_professor.h \
     login.h \
     faculdade.h \
-    cadastrar.h
+    cadastrar.h \
+    alterar_notas.h
 
 FORMS += \
     aluno.ui \
@@ -55,9 +55,9 @@ FORMS += \
     disciplinas_aluno.ui \
     grade_curso.ui \
     turmas.ui \
-    notas_professor.ui \
     login.ui \
-    cadastrar.ui
+    cadastrar.ui \
+    alterar_notas.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

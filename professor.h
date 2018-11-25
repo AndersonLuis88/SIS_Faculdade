@@ -3,7 +3,8 @@
 
 #include <QMainWindow>
 #include "turmas.h"
-#include "notas_professor.h"
+#include "alterar_notas.h"
+
 
 namespace Ui {
 class Professor;
@@ -20,14 +21,13 @@ public:
 private slots:
     void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
+    void on_Alterar_Notas_clicked();
 
     void on_pushButton_3_clicked();
 
 private:
     Ui::Professor *ui;
-    Turmas *TelaTurmas;
-    Notas_Professor *TelaNotas;
+
 };
 
 #endif // PROFESSOR_H
