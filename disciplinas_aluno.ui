@@ -6,45 +6,59 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>550</width>
-    <height>300</height>
+    <width>430</width>
+    <height>313</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Disciplinas</string>
+   <string>Dialog</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QTableWidget" name="tableWidget">
-     <property name="rowCount">
-      <number>0</number>
-     </property>
-     <property name="columnCount">
-      <number>4</number>
-     </property>
-     <column>
-      <property name="text">
-       <string>Curso</string>
+  <widget class="QPushButton" name="btn_voltarAlunoDisciplina">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>280</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Voltar</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>421</width>
+     <height>248</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="font">
+       <font>
+        <pointsize>30</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+        <underline>true</underline>
+       </font>
       </property>
-     </column>
-     <column>
       <property name="text">
-       <string>Disciplina</string>
+       <string>Disciplinas</string>
       </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Professor</string>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Carga Horária</string>
-      </property>
-     </column>
-    </widget>
-   </item>
-  </layout>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTableWidget" name="tw_disci_aluno"/>
+    </item>
+   </layout>
+  </widget>
  </widget>
  <resources/>
  <connections/>

@@ -6,44 +6,60 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>550</width>
-    <height>300</height>
+    <width>533</width>
+    <height>296</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Notas</string>
+   <string>Dialog</string>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout">
-   <item>
-    <widget class="QTableWidget" name="tableWidget">
-     <column>
-      <property name="text">
-       <string>Disciplina</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Nota 1</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Nota 2</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Nota 3</string>
-      </property>
-     </column>
-     <column>
-      <property name="text">
-       <string>Média</string>
-      </property>
-     </column>
-    </widget>
-   </item>
-  </layout>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>10</y>
+     <width>421</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>30</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+     <underline>true</underline>
+    </font>
+   </property>
+   <property name="text">
+    <string>Notas Aluno</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QTableView" name="Tv_notas_aluno">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>70</y>
+     <width>511</width>
+     <height>192</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_voltaraluno">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>270</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Voltar</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
  <connections/>

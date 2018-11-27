@@ -1,14 +1,14 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2018-11-18T00:21:34
+# Project created by QtCreator 2018-11-14T10:12:37
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui sql widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = Faculdade
+TARGET = Sistema
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -26,42 +26,40 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
+        mainwindow.cpp \
     aluno.cpp \
-    professor.cpp \
-    notas_aluno.cpp \
     disciplinas_aluno.cpp \
-    grade_curso.cpp \
-    turmas.cpp \
-    notas_professor.cpp \
-    login.cpp \
-    cadastrar.cpp
+    notas_aluno.cpp \
+    professor.cpp \
+    turmas_professor.cpp \
+    alterar_notas.cpp \
+    formulario.cpp
+
 
 HEADERS += \
+        mainwindow.h \
     aluno.h \
-    professor.h \
-    notas_aluno.h \
     disciplinas_aluno.h \
-    grade_curso.h \
-    turmas.h \
-    notas_professor.h \
-    login.h \
+    notas_aluno.h \
+    professor.h \
+    turmas_professor.h \
+    alterar_notas.h \
     faculdade.h \
-    cadastrar.h
+    formulario.h
+
 
 FORMS += \
+        mainwindow.ui \
     aluno.ui \
-    professor.ui \
-    notas_aluno.ui \
     disciplinas_aluno.ui \
-    grade_curso.ui \
-    turmas.ui \
-    notas_professor.ui \
-    login.ui \
-    cadastrar.ui
+    notas_aluno.ui \
+    professor.ui \
+    turmas_professor.ui \
+    alterar_notas.ui \
+    formulario.ui
+
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
-QT += widgets sql

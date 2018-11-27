@@ -1,76 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Professor</class>
- <widget class="QDialog" name="Professor">
+ <class>Turmas_Professor</class>
+ <widget class="QDialog" name="Turmas_Professor">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>321</width>
-    <height>345</height>
+    <width>400</width>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="btn_voltaPrincipal">
+  <widget class="QPushButton" name="btn_voltaprofessor">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>320</y>
+     <x>310</x>
+     <y>270</y>
      <width>75</width>
      <height>23</height>
     </rect>
    </property>
    <property name="text">
-    <string>SAIR</string>
+    <string>Voltar</string>
    </property>
   </widget>
   <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>30</y>
-     <width>291</width>
-     <height>281</height>
+     <x>10</x>
+     <y>20</y>
+     <width>381</width>
+     <height>248</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="turmas_professor">
       <property name="font">
        <font>
-        <pointsize>20</pointsize>
+        <pointsize>30</pointsize>
         <weight>75</weight>
         <bold>true</bold>
         <underline>true</underline>
        </font>
       </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
       <property name="text">
-       <string>Professor</string>
+       <string>Turmas</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+      <property name="indent">
+       <number>5</number>
+      </property>
      </widget>
     </item>
     <item>
-     <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
-       <widget class="QPushButton" name="btn_turmas">
-        <property name="text">
-         <string>Turmas</string>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="AlterarNota">
-        <property name="text">
-         <string>Lançar  Notas</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <widget class="QTableView" name="TV_Turmas_Professor"/>
     </item>
    </layout>
   </widget>

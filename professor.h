@@ -1,15 +1,19 @@
 #ifndef PROFESSOR_H
 #define PROFESSOR_H
 
-#include <QMainWindow>
-#include "turmas.h"
-#include "notas_professor.h"
+#include <QDialog>
+#include "alterar_notas.h"
+#include "ui_alterar_notas.h"
+#include "turmas_professor.h"
+
+
+
 
 namespace Ui {
 class Professor;
 }
 
-class Professor : public QMainWindow
+class Professor : public QDialog
 {
     Q_OBJECT
 
@@ -18,16 +22,18 @@ public:
     ~Professor();
 
 private slots:
-    void on_pushButton_clicked();
 
-    void on_pushButton_2_clicked();
 
-    void on_pushButton_3_clicked();
+    void on_AlterarNota_clicked();
+
+
+
+    void on_btn_turmas_clicked();
+
+    void on_btn_voltaPrincipal_clicked();
 
 private:
     Ui::Professor *ui;
-    Turmas *TelaTurmas;
-    Notas_Professor *TelaNotas;
 };
 
 #endif // PROFESSOR_H

@@ -15,6 +15,9 @@ public:
     explicit Notas_Aluno(QWidget *parent = nullptr);
     ~Notas_Aluno();
 
+private slots:
+    void on_btn_voltaraluno_clicked();
+
 private:
     Ui::Notas_Aluno *ui;
 };

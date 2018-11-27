@@ -1,7 +1,12 @@
-#include "faculdade.h"
+#include "aluno.h"
+#include "ui_aluno.h"
+#include <QtSql>
+#include <QMessageBox>
+#include "mainwindow.h"
+#include <QMainWindow>
 
 Aluno::Aluno(QWidget *parent) :
-    QMainWindow(parent),
+    QDialog(parent),
     ui(new Ui::Aluno)
 {
     ui->setupUi(this);
@@ -11,41 +16,26 @@ Aluno::~Aluno()
 {
     delete ui;
 }
-
-void Aluno::on_pushButton_clicked()
+//Referência para a tela de notas, quando clicado no botão Notas
+void Aluno::on_notas_clicked()
 {
-    TelaNotAluno = new Notas_Aluno(this);
-    ui->mdiArea->addSubWindow(TelaNotAluno);
-    TelaNotAluno->setWindowIcon(QIcon("C:/Users/Z400/Desktop/Faculdade/c++.ico"));
-    TelaNotAluno->showMaximized();
+    this->close();
+    Notas_Aluno f_nota;
+    f_nota.setModal(true);
+    f_nota.exec();
 }
 
-void Aluno::on_pushButton_2_clicked()
+
+//Referência para a tela de notas, quando clicado no botão Diciplinas
+void Aluno::on_disciplinas_clicked()
 {
-    TelaDiscAluno = new Disciplinas_Aluno(this);
-    ui->mdiArea->addSubWindow(TelaDiscAluno);
-    TelaDiscAluno->setWindowIcon(QIcon("C:/Users/Z400/Desktop/Faculdade/c++.ico"));
-    TelaDiscAluno->showMaximized();
+    this->close();
+    Disciplinas_Aluno f_disciplina_aluno;
+    f_disciplina_aluno.setModal(true);
+    f_disciplina_aluno.exec();
 }
 
-void Aluno::on_pushButton_3_clicked()
+void Aluno::on_btn_voltarPrincipal_clicked()
 {
-    TelaGrade = new Grade_Curso(this);
-    ui->mdiArea->addSubWindow(TelaGrade);
-    TelaGrade->setWindowIcon(QIcon("C:/Users/Z400/Desktop/Faculdade/c++.ico"));
-    TelaGrade->showMaximized();
-}
-
-void Aluno::on_pushButton_4_clicked()
-{
-    QMessageBox::StandardButton verifica;
-    verifica = QMessageBox::warning(this,"Confirmação de Saida","Deseja realmente sair do Sistema Aluno?",QMessageBox::Ok|QMessageBox::Cancel);
-    if( verifica == QMessageBox::Ok) {
-        this->close();
-        Login *TelaLogin = new Login;
-        TelaLogin->setFixedSize(297,300);
-        TelaLogin->setWindowFlag(Qt::WindowMinMaxButtonsHint, false);
-        TelaLogin->setWindowIcon(QIcon("C:/Users/Z400/Desktop/Faculdade/c++.ico"));
-        TelaLogin->show();
-    }
+    this->close();
 }

@@ -15,6 +15,11 @@ public:
     explicit Disciplinas_Aluno(QWidget *parent = nullptr);
     ~Disciplinas_Aluno();
 
+private slots:
+
+
+    void on_btn_voltarAlunoDisciplina_clicked();
+
 private:
     Ui::Disciplinas_Aluno *ui;
 };
